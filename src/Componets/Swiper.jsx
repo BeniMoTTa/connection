@@ -1,10 +1,15 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { games } from "../Data/swiper";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 const SwiperGame = () => {
   return (
     <Swiper
+      modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
       slidesPerView={1}
       breakpoints={{
@@ -23,6 +28,13 @@ const SwiperGame = () => {
       }}
       onSlideChange={() => console.log("slide change")}
       onSwiper={(swiper) => console.log(swiper)}
+      navigation
+      pagination={{ clickable: true }}
+      autoplay={{
+        delay: 5000,
+        disableOnInteraction: false,
+      }}
+      loop={true}
     >
       {games.map((game) => (
         <SwiperSlide key={game.id}>

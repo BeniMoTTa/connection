@@ -76,6 +76,27 @@ a:hover {
     color: yellow;
   }
 }
+.swiper-button-prev,
+.swiper-button-next {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #0d0d21;
+}
+
+.swiper-pagination-bullet {
+  background-color: #007bff;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+}
 
 .background-animated {
   background: linear-gradient(45deg, #27374d, #526d82, #27374d, #2e2e2e);
